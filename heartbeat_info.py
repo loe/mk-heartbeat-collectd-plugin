@@ -25,6 +25,10 @@ def get_stats():
         data = f.read()
 
     m = re.findall(r'\d+\.\d+', data)
+    if not len(m) == 4:
+        logger('err', 'Not enough entries the the file.')
+        return
+
     # Convert all of these values from seconds to milliseconds, they'll be cast to int by the read_callback()
     stats['current'] = float(m[0]) * 100
     stats['1m'] = float(m[1]) * 100
