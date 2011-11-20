@@ -18,7 +18,7 @@ Install
 
 Configuration
 -------------
-Add the following to your collectd config **or** use the included redis.conf.
+Add the following to your collectd config **or** use the included heartbeat.conf.
 
     <LoadPlugin python>
       Globals true
